@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO‘SIQLARDAN QOCH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="game-container">
+    <header>
+      <div class="logo">GOLDEN <span>RUN</span></div>
+      <div class="subtitle">TO‘SIQLARDAN QOCH</div>
+    </header>
+
+    <div class="stats">
+      <div class="stat">
+        <small>HISOB</small>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat">
+        <small>TANGALAR</small>
+        <strong id="coins">0</strong>
+      </div>
+      <div class="stat">
+        <small>REKORD</small>
+        <strong id="record">0</strong>
+      </div>
+    </div>
+
+    <div class="canvas-box">
+      <canvas id="game" width="900" height="600"></canvas>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay-card">
+          <div class="crown">♛</div>
+          <h1 id="overlayTitle">GOLDEN RUN</h1>
+          <p id="overlayText">To‘siqlardan qoch va imkon qadar ko‘proq tanga yig‘!</p>
+          <button id="startBtn">O‘YINNI BOSHLASH</button>
+          <div class="instructions">
+            <span>← → Yo‘lakni almashtirish</span>
+            <span>↑ Sakrash</span>
+            <span>↓ Sirpanish</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-controls">
+      <button data-action="left">◀</button>
+      <button data-action="jump">▲</button>
+      <button data-action="slide">▼</button>
+      <button data-action="right">▶</button>
+    </div>
+
+    <footer>
+      <span>LOYIHA MUALLIFI: AKRAMJONOVA JADRA MARATOVNA</span>
+      <span>GOLDEN RUN © 2026</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

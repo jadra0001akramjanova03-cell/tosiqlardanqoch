@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;700&display=swap');
+
+:root {
+  --gold: #ffd21f;
+  --gold-light: #fff3a3;
+  --gold-dark: #b88600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, #292000 0%, #090909 48%, #000 100%);
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 22px 12px;
+}
+
+.game-container {
+  width: min(100%, 1000px);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(25px, 5vw, 43px);
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: var(--gold-light);
+  text-shadow: 0 0 12px var(--gold), 0 0 30px #b88600;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.subtitle {
+  color: #d4b94d;
+  letter-spacing: 6px;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.stat {
+  flex: 1;
+  max-width: 180px;
+  text-align: center;
+  padding: 9px;
+  border: 1px solid #8d6b00;
+  background: linear-gradient(145deg, #1c1807, #080808);
+  border-radius: 10px;
+  box-shadow: 0 0 12px #b8860025;
+}
+
+.stat small {
+  display: block;
+  color: #c9b45b;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.stat strong {
+  display: block;
+  color: var(--gold-light);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 21px;
+  margin-top: 3px;
+}
+
+.canvas-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid var(--gold-dark);
+  border-radius: 15px;
+  box-shadow: 0 0 22px #ffd21f40, inset 0 0 20px #000;
+  background: #080808;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000b;
+  backdrop-filter: blur(5px);
+  padding: 15px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-card {
+  width: min(430px, 100%);
+  text-align: center;
+  padding: 30px 20px;
+  border: 1px solid var(--gold);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #1d1806, #080808);
+  box-shadow: 0 0 35px #ffd21f35;
+}
+
+.crown {
+  font-size: 55px;
+  color: var(--gold);
+  text-shadow: 0 0 20px var(--gold);
+}
+
+.overlay h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--gold-light);
+  font-size: clamp(22px, 5vw, 32px);
+  margin: 10px 0;
+}
+
+.overlay p {
+  color: #d8c98d;
+  font-size: 17px;
+  margin-bottom: 22px;
+}
+
+#startBtn {
+  border: 0;
+  padding: 14px 25px;
+  border-radius: 8px;
+  background: linear-gradient(120deg, #b88600, #ffe66b, #d4a900);
+  color: #090909;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 0 20px #ffd21f65;
+  transition: .2s;
+}
+
+#startBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ffd21f;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 22px;
+  color: #c5ad54;
+  font-size: 14px;
+}
+
+.mobile-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.mobile-controls button {
+  width: 58px;
+  height: 48px;
+  border: 1px solid var(--gold-dark);
+  border-radius: 10px;
+  color: var(--gold-light);
+  background: #171304;
+  font-size: 22px;
+  box-shadow: 0 0 10px #ffd21f22;
+  touch-action: manipulation;
+}
+
+.mobile-controls button:active {
+  background: var(--gold);
+  color: black;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #a58a35;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 12px 3px;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 12px 6px;
+  }
+
+  .stats {
+    gap: 6px;
+  }
+
+  .stat {
+    padding: 7px 3px;
+  }
+
+  .stat strong {
+    font-size: 16px;
+  }
+
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+}
